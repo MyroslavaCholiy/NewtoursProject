@@ -155,6 +155,10 @@ public class NewtoursFlightConfirmation {
 		WebElement continueButon = driver.findElement(By.xpath("//input[@name='findFlights']"));
 		continueButon.click();
 
+		
+		// NetoursLocator is Done up to this point
+		
+		//
 		// flightPageUrl1 containers currentPage
 
 		String currentPage1 = "http://newtours.demoaut.com/";
@@ -207,10 +211,12 @@ public class NewtoursFlightConfirmation {
 		// 4 Book A Flight
 
 		WebElement firstNameTab = driver.findElement(By.xpath("//input[@name='passFirst0']"));
+		firstNameTab.clear();
 		String firstName = "John";
 		firstNameTab.sendKeys(firstName);
 
 		WebElement lasttNameTab = driver.findElement(By.xpath("//input[@name='passLast0']"));
+		lasttNameTab.clear();
 		String lasttName = "Smith";
 		lasttNameTab.sendKeys(lasttName);
 
@@ -259,7 +265,7 @@ public class NewtoursFlightConfirmation {
 		WebElement expirationLocator = driver.findElement(By.xpath("//select[@name='cc_exp_dt_mn']"));
 		Select expiration = new Select(expirationLocator);
 		expiration.selectByVisibleText("12");
-		;
+		
 
 		if (expiration.getFirstSelectedOption().getText().equals("12")) {
 			System.out.println("Verification Passed! Card card expiration -12");
@@ -278,6 +284,7 @@ public class NewtoursFlightConfirmation {
 		}
 
 		WebElement addressTab = driver.findElement(By.xpath("//input[@name='billAddress1']"));
+		addressTab.clear();
 		String address = "7921 Jonas Branch dr";
 		addressTab.sendKeys(address);
 
@@ -288,6 +295,7 @@ public class NewtoursFlightConfirmation {
 		}
 
 		WebElement cityTab = driver.findElement(By.xpath("//input[@name='billCity']"));
+		cityTab.clear();
 		String city = "McLean";
 		cityTab.sendKeys(city);
 
@@ -298,6 +306,7 @@ public class NewtoursFlightConfirmation {
 		}
 
 		WebElement stateTab = driver.findElement(By.xpath("//input[@name='billState']"));
+		stateTab.clear();
 		String state = "VA";
 		stateTab.sendKeys(state);
 
@@ -308,6 +317,7 @@ public class NewtoursFlightConfirmation {
 		}
 
 		WebElement postalTab = driver.findElement(By.xpath("//input[@name='billZip']"));
+		postalTab.clear();
 		String postal = "22102";
 		postalTab.sendKeys(postal);
 
@@ -318,6 +328,7 @@ public class NewtoursFlightConfirmation {
 		}
 
 		WebElement countryLocator = driver.findElement(By.xpath("//select[@name='billCountry']"));
+		
 		Select country = new Select(countryLocator);
 		country.selectByValue("215");
 
