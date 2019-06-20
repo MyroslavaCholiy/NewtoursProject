@@ -7,15 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NewtoursSetUp {
 
-	private static NewtoursSetUp newtoursSetUp;
+	public static NewtoursSetUp newtoursSetUp;
 	private static WebDriver driver;
+	public static WebDriver getDriver;
 
 	private NewtoursSetUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver2.exe");
-
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe")
+		
 		driver = new ChromeDriver();
 
-		driver.get("http://newtours.demoaut.com");
+		driver.get("http://newtours.demoaut.com/mercuryreservation.php?osCsid=2db06c1ca7edfd46ec4e2c275aff352c");
 
 		driver.manage().window().maximize();
 
